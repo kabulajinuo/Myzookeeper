@@ -1,0 +1,18 @@
+server:
+  port: 6061
+spring:
+  application:
+    name: zk-consumer
+  cloud:
+    zookeeper:
+      connect-string: 47.104.8.131:2181
+      discovery:
+        register: true
+        enabled: true
+        instance-id: 1
+        root: /test
+
+# 开启hystrix 断路器
+feign:
+  hystrix:
+    enabled: true
