@@ -21,6 +21,7 @@ public class TestController {
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     @ApiOperation(value = "测试", notes = "登录", httpMethod = "GET")
     public String test(){
+
         return testService.test();
     }
 }
